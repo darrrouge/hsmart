@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSmart</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var matches = !!location.href.match(/rooms/);
+        console.log(matches);
+    </script>
+</head>
+<body>
+    <div class="box-outer">
+        <div class="logo">
+            <a href="/">
+                <img src="./Logo 1.svg" alt="">
+            </a>
+        </div>
+        <div class="nav">
+            <a class="nav-link" href="rooms.html">
+                <div class="icon-wrapper house-wrapper">
+                    <div class="icon house" id="roomsIcon"></div>
+                    <div class="rooms text" id="rooms">Rooms</div>
+                </div>
+            </a>
+            <a class="nav-link" href="security.html">
+                <div class="icon-wrapper lock-wrapper">
+                    <div class="icon lock" id="securityIcon"></div>
+                    <div class="security text" id="security">Security</div>
+                </div>
+            </a>
+            <a class="nav-link" href="statistics.html">
+                <div class="icon-wrapper diagram-wrapper">
+                    <div class="icon diagram" id="statisticsIcon"></div>
+                    <div class="statistics text" id="statistics">Statistics</div>
+                </div>
+            </a>
+            <a class="nav-link" href="members.html">
+                <div class="icon-wrapper members-wrapper">
+                    <div class="icon people" id="membersIcon"></div>
+                    <div class="members text" id="members">Members</div>
+                </div>
+            </a>
+            <a class="nav-link" href="billing.html">
+                <div class="icon-wrapper dollar-wrapper">
+                    <div class="icon dollar" id="billingIcon"></div>
+                    <div class="billing text" id="billing">Billing</div>
+                </div>
+            </a>
+        </div>
+        <div class="box-inner">
+            <div class="lk-wrapper">
+                <input type="text" class="search" placeholder="Search">
+                <img src="./settings.svg" alt="" class="settings">
+                <img src="./dz.svg" alt="" class="notification">
+                <a href="/">
+                    <img src="./lk.svg" alt="" class="lk">
+                </a>
+            </div>
+            <div class="title">Welcome, Annie!</div>
+            <div class="main-wrapper">
+                <div class="item1">
+                    <div class="heading1">Time</div>
+                    <div class="time">3:15 pm</div>
+                </div>
+                <div class="item2">
+                    <div class="heading2">Outdoor Temperature</div>
+                    <div class="temperature">+21.3°C</div>
+                    <div class="sun">
+                        <img src="./sun.svg" alt="">
+                    </div>
+                </div>
+                <div class="item3">
+                    <div class="heading3">Members at home:</div>
+                    <div class="account-wrapper">
+                        <div class="account">
+                            <div class="img img1"></div>
+                            <div class="name">Annie</div>
+                        </div>
+                        <div class="account">
+                            <div class="img img2"></div>
+                            <div class="name">John</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Controls:</h2>
+            <div class="control-wrapper">
+                <div class="item-light">
+                    <div class="title1">Light Intensity</div>
+                    <div class="progress83">
+                        <div class="percent83">83%</div>
+                        <div class="semicircle"></div>
+                        <div class="scale">0</div>
+                        <div class="scale">100</div>
+                    </div>
+                </div>
+                <div class="item-air">
+                    <div class="title1">Air Conditioning</div>
+                    <div class="progress36">
+                        <div class="percent36">36%</div>
+                    </div>
+                </div>
+                <div class="item-temp">
+                    <div class="title1">Temperature</div>
+                    <div class="progress23"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let rooms = !!location.href.match(/rooms/);
+        let security = !!location.href.match(/security/);
+        let statistics = !!location.href.match(/statistics/);
+        let members = !!location.href.match(/members/);
+        let billing = !!location.href.match(/billing/);
+        
+        if (rooms) {
+            document.getElementById("rooms").classList.add("white");
+            document.getElementById("roomsIcon").classList.add("white");
+        }
+
+        if (security) {
+            document.getElementById("security").classList.add("white");
+            document.getElementById("securityIcon").classList.add("white");
+        }
+
+        if (statistics) {
+            document.getElementById("statistics").classList.add("white");
+            document.getElementById("statisticsIcon").classList.add("white");
+        }
+
+        if (members) {
+            document.getElementById("members").classList.add("white");
+            document.getElementById("membersIcon").classList.add("white");
+        }
+
+        if (billing) {
+            document.getElementById("billing").classList.add("white");
+            document.getElementById("billingIcon").classList.add("white");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSmart</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var matches = !!location.href.match(/statistics/);
+        console.log(matches);
+    </script>
+</head>
+<body>
+    <div class="box-outer">
+        <div class="logo">
+            <a href="/">
+                <img src="./Logo 1.svg" alt="">
+            </a>
+        </div>
+        <div class="nav">
+            <a class="nav-link" href="rooms.html">
+                <div class="icon-wrapper house-wrapper">
+                    <div class="icon house" id="roomsIcon"></div>
+                    <div class="rooms text" id="rooms">Rooms</div>
+                </div>
+            </a>
+            <a class="nav-link" href="security.html">
+                <div class="icon-wrapper lock-wrapper">
+                    <div class="icon lock" id="securityIcon"></div>
+                    <div class="security text" id="security">Security</div>
+                </div>
+            </a>
+            <a class="nav-link" href="statistics.html">
+                <div class="icon-wrapper diagram-wrapper">
+                    <div class="icon diagram" id="statisticsIcon"></div>
+                    <div class="statistics text" id="statistics">Statistics</div>
+                </div>
+            </a>
+            <a class="nav-link" href="members.html">
+                <div class="icon-wrapper members-wrapper">
+                    <div class="icon people" id="membersIcon"></div>
+                    <div class="members text" id="members">Members</div>
+                </div>
+            </a>
+            <a class="nav-link" href="billing.html">
+                <div class="icon-wrapper dollar-wrapper">
+                    <div class="icon dollar" id="billingIcon"></div>
+                    <div class="billing text" id="billing">Billing</div>
+                </div>
+            </a>
+        </div>
+        <div class="box-inner">
+            <div class="lk-wrapper">
+                <input type="text" class="search" placeholder="Search">
+                <img src="./settings.svg" alt="" class="settings">
+                <img src="./dz.svg" alt="" class="notification">
+                <a href="/">
+                    <img src="./lk.svg" alt="" class="lk">
+                </a>
+            </div>
+            <div class="title">Statistics</div>
+        </div>
+
+    </div>
+    <script>
+        let rooms = !!location.href.match(/rooms/);
+        let security = !!location.href.match(/security/);
+        let statistics = !!location.href.match(/statistics/);
+        let members = !!location.href.match(/members/);
+        let billing = !!location.href.match(/billing/);
+        
+        if (rooms) {
+            document.getElementById("rooms").classList.add("white");
+            document.getElementById("roomsIcon").classList.add("white");
+        }
+
+        if (security) {
+            document.getElementById("security").classList.add("white");
+            document.getElementById("securityIcon").classList.add("white");
+        }
+
+        if (statistics) {
+            document.getElementById("statistics").classList.add("white");
+            document.getElementById("statisticsIcon").classList.add("white");
+        }
+
+        if (members) {
+            document.getElementById("members").classList.add("white");
+            document.getElementById("membersIcon").classList.add("white");
+        }
+
+        if (billing) {
+            document.getElementById("billing").classList.add("white");
+            document.getElementById("billingIcon").classList.add("white");
+        }
+    </script>
+</body>
+</html>
